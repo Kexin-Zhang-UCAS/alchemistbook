@@ -76,7 +76,8 @@ import re
 import subprocess
 from multiprocessing import Process, Pool, Manager
 import eventlet
-
+import random
+import copy
 github_ips = ["140.82.113.3",
               "140.82.121.3",
               "20.205.243.166",
@@ -134,7 +135,9 @@ def find_1st_ip(ips):
     #     print("所有ip都不能用了:(")
 
 def write_in_ubuntu_hosts():
-    ip = find_1st_ip(github_ips)
+    ips=copy.deepcopy(github_ips)
+    random.shuffle(ips)
+    ip = find_1st_ip(ips)
     if ip != None:
         with open("/etc/hosts", "r") as f:
             c = f.read()
