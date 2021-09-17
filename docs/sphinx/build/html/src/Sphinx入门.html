@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Sphinx入门 &mdash; alchemistbook  文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="3. reStructuredText入门" href="reStucturedText%E5%85%A5%E9%97%A8.html" />
+    <link rel="prev" title="1. 科学打开github" href="%E7%A7%91%E5%AD%A6%E6%89%93%E5%BC%80github.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> alchemistbook
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">目 录:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="%E7%A7%91%E5%AD%A6%E6%89%93%E5%BC%80github.html">1. 科学打开github</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Sphinx入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 启动模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.2. 定义文档结构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#toctree">2.2.1. <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree</span></code>指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ref">2.2.2. 跨文件引用<code class="docutils literal notranslate"><span class="pre">:ref:</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.3. 记录对象</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conf-py">2.4. 基本配置<code class="docutils literal notranslate"><span class="pre">conf.py</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.4.1. 项目信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.4.2. 一般配置项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-theme">2.4.3. 主题配置<code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autodoc">2.4.4. Autodoc设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intersphinx">2.4.5. Intersphinx设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">2.4.6. 其他</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">2.5. 构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">2.6. 多文件多类型构建</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reStucturedText%E5%85%A5%E9%97%A8.html">3. reStructuredText入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%B8%80%E4%BA%9B%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99.html">4. 一些资源网站</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">alchemistbook</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">2. </span>Sphinx入门</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/src/Sphinx入门.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx">
+<h1><span class="section-number">2. </span>Sphinx入门<a class="headerlink" href="#sphinx" title="永久链接至标题"></a></h1>
+<section id="id1">
+<h2><span class="section-number">2.1. </span>启动模板<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart <span class="c1"># y * *</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">2.2. </span>定义文档结构<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<p>在文件<code class="docutils literal notranslate"><span class="pre">index.rst</span></code>中定义目录页</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+
+   usage/installation  
+   usage/quickstart
+<span class="cp">   ...</span>
+</pre></div>
+</div>
+<p>下面显而易见就是每一部分的路径, 但是不包含文件拓展名.</p>
+<section id="toctree">
+<h3><span class="section-number">2.2.1. </span><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree</span></code>指令<a class="headerlink" href="#toctree" title="永久链接至标题"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">toctree</span></code>是<code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>定义的生成文档目录的指令</p>
+<blockquote>
+<div><ol>
+<li><p>最大深度: <code class="docutils literal notranslate"><span class="pre">:maxdepth:</span> <span class="pre">2</span></code></p></li>
+<li><p>章节编号: <code class="docutils literal notranslate"><span class="pre">:numbered:</span></code> 也可以限制深度</p></li>
+<li><p>toctree名: <code class="docutils literal notranslate"><span class="pre">:caption:</span> <span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents</span></code></p></li>
+<li><p>toctree链接: <code class="docutils literal notranslate"><span class="pre">:name:</span> <span class="pre">mastertoc</span></code></p></li>
+<li><p>只显示一级标题: <code class="docutils literal notranslate"><span class="pre">:titlesonly:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">glob</span></code>匹配顺序: <code class="docutils literal notranslate"><span class="pre">:glob:</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">glob</span></code>匹配逆序: <code class="docutils literal notranslate"><span class="pre">:reversed:</span></code></p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:glob:</span>
+   <span class="nc">:reversed:</span>
+   
+   intro*
+   recipe/*
+   *
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>不插入链接: <code class="docutils literal notranslate"><span class="pre">:hidden:</span></code></p></li>
+<li><p>只拥有一个顶级: <code class="docutils literal notranslate"><span class="pre">:includehidden:</span></code></p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="ref">
+<h3><span class="section-number">2.2.2. </span>跨文件引用<code class="docutils literal notranslate"><span class="pre">:ref:</span></code><a class="headerlink" href="#ref" title="永久链接至标题"></a></h3>
+<p>在Sphinx源文件中，您可以使用标准的大多数功能 <a class="reference external" href="https://www.sphinx.org.cn/glossary.html#term-restructuredtext">reStructuredText</a> 。 Sphinx还增加了一些功能。 例如，您可以使用 <a class="reference external" href="https://www.sphinx.org.cn/usage/restructuredtext/roles.html#role-ref"><code class="docutils literal notranslate"><span class="pre">ref</span></code></a> 角色以可移植的方式(适用于所有输出类型)添加跨文件引用。</p>
+<p>例如，如果您正在查看HTML版本，则可以查看此文档的源代码 - 使用侧栏中的”显示源”链接。</p>
+</section>
+</section>
+<section id="id3">
+<h2><span class="section-number">2.3. </span>记录对象<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+<p><a class="reference external" href="https://www.sphinx.org.cn/usage/quickstart.html#">待更新</a></p>
+</section>
+<section id="conf-py">
+<h2><span class="section-number">2.4. </span>基本配置<code class="docutils literal notranslate"><span class="pre">conf.py</span></code><a class="headerlink" href="#conf-py" title="永久链接至标题"></a></h2>
+<section id="id4">
+<h3><span class="section-number">2.4.1. </span>项目信息<a class="headerlink" href="#id4" title="永久链接至标题"></a></h3>
+<ol class="simple">
+<li><p><strong>project</strong>: 项目名称</p></li>
+<li><p><strong>author</strong>: 项目作者</p></li>
+<li><p><strong>copyright</strong>: <code class="docutils literal notranslate"><span class="pre">2008,</span> <span class="pre">Author</span> <span class="pre">Name</span></code> 风格的版权声明</p></li>
+<li><p><strong>version</strong>: 主要项目版本, 用作 <code class="docutils literal notranslate"><span class="pre">|version|</span></code> 的替代品</p></li>
+<li><p><strong>release</strong>: 完整的项目版本, 用作 <code class="docutils literal notranslate"><span class="pre">|release|</span></code> 的替代品</p></li>
+</ol>
+</section>
+<section id="id5">
+<h3><span class="section-number">2.4.2. </span>一般配置项<a class="headerlink" href="#id5" title="永久链接至标题"></a></h3>
+<ol>
+<li><p><strong>extensions</strong>: 模块名称为 <a class="reference external" href="https://www.sphinx.org.cn/usage/extensions/index.html">extensions</a> 的字符串列表</p></li>
+<li><p><strong>source_suffix</strong>: 源文件的文件扩展名</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>source_encoding</strong>: 所有reST源文件的编码, 推荐的编码和默认值是 <code class="docutils literal notranslate"><span class="pre">'utf-8-sig'</span></code></p></li>
+<li><p><strong>source_parsers</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;recommonmark.parser.CommonMarkParser&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>使用markdown时， 必须安装解析器<code class="docutils literal notranslate"><span class="pre">recommonmark</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install --upgrade recommonmark
+</pre></div>
+</div>
+<p>之后需要更新多个<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>变量</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>可以进一步配置<a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/auto_structify.html"><em>recommonmark</em></a> 以允许标准 <em>CommonMark</em> 不支持的自定义语法</p>
+</li>
+<li><p><strong>master_doc</strong>: The document name of the “master” document, default is index</p></li>
+<li><p><strong>exclude_patterns</strong>: 排除的<code class="docutils literal notranslate"><span class="pre">glob</span></code>模式</p></li>
+<li><p><strong>language</strong>: <code class="docutils literal notranslate"><span class="pre">zh_CN</span></code> 简体中文</p></li>
+<li><p><a class="reference external" href="https://www.sphinx.org.cn/usage/configuration.html#project-information">其他精细配置</a></p></li>
+</ol>
+</section>
+<section id="html-theme">
+<h3><span class="section-number">2.4.3. </span>主题配置<code class="docutils literal notranslate"><span class="pre">html_theme</span></code><a class="headerlink" href="#html-theme" title="永久链接至标题"></a></h3>
+<p><a class="reference external" href="https://www.sphinx.org.cn/theming.html">可以创建自定义主题</a></p>
+<p>但是一般用现有的就可以了:)</p>
+<p>除了变量<code class="docutils literal notranslate"><span class="pre">html_theme</span></code>外有时还需要<code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code>配套使用</p>
+<ol class="simple">
+<li><p>内置主题: 只需要改<code class="docutils literal notranslate"><span class="pre">html_theme</span></code></p></li>
+<li><p>pip主题: 只需要改<code class="docutils literal notranslate"><span class="pre">html_theme</span></code></p></li>
+<li><p>主题包: 还需设置<code class="docutils literal notranslate"><span class="pre">html_theme_path</span> <span class="pre">=</span> <span class="pre">[&quot;.&quot;]</span></code></p></li>
+</ol>
+<table class="longtable docutils align-default">
+   <colgroup>
+   <col style="width: 50%">
+   <col style="width: 50%">
+   </colgroup>
+   <tbody>
+   <tr class="row-odd"><td><p><strong>内置主题概述</strong></p></td>
+   <td></td>
+   </tr>
+   <tr class="row-even"><td><p><img alt="alabaster" src="https://www.sphinx.org.cn/_images/alabaster.png"></p>
+   <p><em>alabaster</em></p>
+   </td>
+   <td><p><img alt="classic" src="https://www.sphinx.org.cn/_images/classic.png"></p>
+   <p><em>classic</em></p>
+   </td>
+   </tr>
+   <tr class="row-odd"><td><p><img alt="sphinxdoc" src="https://www.sphinx.org.cn/_images/sphinxdoc.png"></p>
+   <p><em>sphinxdoc</em></p>
+   </td>
+   <td><p><img alt="scrolls" src="https://www.sphinx.org.cn/_images/scrolls.png"></p>
+   <p><em>scrolls</em></p>
+   </td>
+   </tr>
+   <tr class="row-even"><td><p><img alt="agogo" src="https://www.sphinx.org.cn/_images/agogo.png"></p>
+   <p><em>agogo</em></p>
+   </td>
+   <td><p><img alt="traditional" src="https://www.sphinx.org.cn/_images/traditional.png"></p>
+   <p><em>traditional</em></p>
+   </td>
+   </tr>
+   <tr class="row-odd"><td><p><img alt="nature" src="https://www.sphinx.org.cn/_images/nature.png"></p>
+   <p><em>nature</em></p>
+   </td>
+   <td><p><img alt="haiku" src="https://www.sphinx.org.cn/_images/haiku.png"></p>
+   <p><em>haiku</em></p>
+   </td>
+   </tr>
+   <tr class="row-even"><td><p><img alt="pyramid" src="https://www.sphinx.org.cn/_images/pyramid.png"></p>
+   <p><em>pyramid</em></p>
+   </td>
+   <td><p><img alt="bizstyle" src="https://www.sphinx.org.cn/_images/bizstyle.png"></p>
+   <p><em>bizstyle</em></p>
+   </td>
+   </tr>
+   </tbody>
+   </table><p>每一个主题都可以有进一步配置, 具体见<a class="reference external" href="https://www.sphinx.org.cn/usage/theming.html">here</a></p>
+<p>有许多第三方主题可用. 其中一些是一般用途, 而另一些则是针对单个项目的. 下面列出了第三方主题的一部分. 在 <a class="reference external" href="https://pypi.org/search/?q=&amp;o=&amp;c=Framework+%3A%3A+Sphinx+%3A%3A+Theme">PyPI</a>, <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=sphinx+theme&amp;type=">GitHub</a> 和 <a class="reference external" href="https://sphinx-themes.org/">sphinx-themes.org</a> 上可以找到更多.</p>
+<p>第三方经典主题: <em>sphinx_rtd_theme</em></p>
+<p><img alt="https://www.sphinx.org.cn/_images/sphinx_rtd_theme.png" src="https://www.sphinx.org.cn/_images/sphinx_rtd_theme.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx-rtd-theme -i https://pypi.tuna.tsinghua.edu.cn/simple
+</pre></div>
+</div>
+</section>
+<section id="autodoc">
+<h3><span class="section-number">2.4.4. </span>Autodoc设置<a class="headerlink" href="#autodoc" title="永久链接至标题"></a></h3>
+<p><a class="reference external" href="https://www.sphinx.org.cn/usage/quickstart.html">待更新</a></p>
+</section>
+<section id="intersphinx">
+<h3><span class="section-number">2.4.5. </span>Intersphinx设置<a class="headerlink" href="#intersphinx" title="永久链接至标题"></a></h3>
+<p><a class="reference external" href="https://www.sphinx.org.cn/usage/quickstart.html">待更新</a></p>
+</section>
+<section id="id6">
+<h3><span class="section-number">2.4.6. </span>其他<a class="headerlink" href="#id6" title="永久链接至标题"></a></h3>
+<p><a class="reference external" href="https://www.sphinx.org.cn/usage/extensions/index.html">其他拓展</a></p>
+<p><a class="reference external" href="https://www.sphinx.org.cn/usage/advanced/setuptools.html">Setuptools集成</a></p>
+<p><a class="reference external" href="https://www.sphinx.org.cn/templating.html#templating">模板</a></p>
+<p><a class="reference external" href="https://www.sphinx.org.cn/extdev/index.html#dev-extensions">写扩展</a></p>
+</section>
+</section>
+<section id="id7">
+<h2><span class="section-number">2.5. </span>构建<a class="headerlink" href="#id7" title="永久链接至标题"></a></h2>
+<p><a class="reference external" href="https://www.sphinx.org.cn/man/sphinx-build.html"><code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a>命令或者直接使用make脚本</p>
+<p>语法:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h2><span class="section-number">2.6. </span>多文件多类型构建<a class="headerlink" href="#id8" title="永久链接至标题"></a></h2>
+<p>待更新…</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="%E7%A7%91%E5%AD%A6%E6%89%93%E5%BC%80github.html" class="btn btn-neutral float-left" title="1. 科学打开github" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="reStucturedText%E5%85%A5%E9%97%A8.html" class="btn btn-neutral float-right" title="3. reStructuredText入门" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2021, Kexin-Zhang-UCAS.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
